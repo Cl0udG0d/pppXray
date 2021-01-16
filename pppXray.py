@@ -5,22 +5,11 @@ import os
 
 RootPath = os.path.dirname(os.path.abspath(__file__))
 saveDir = "{}\\save".format(RootPath)
-saveTempDir = "{}\\save\\temp".format(RootPath)
-saveXrayReport = '{}\\save\\xrayReport'.format(RootPath)
+# saveXrayReport = '{}\\save\\xrayReport'.format(RootPath)
 
 def init():
     if not os.path.exists(saveDir):
         os.makedirs(saveDir)
-        os.makedirs(saveTempDir)
-        os.makedirs(saveXrayReport)
-    if not os.path.exists(saveTempDir):
-        os.makedirs(saveTempDir)
-    if not os.path.exists(saveXrayReport):
-        os.makedirs(saveXrayReport)
-    return
-
-#https://mrxiuxing.com/posts/86d537dd.html
-def mergeResult():
     return
 
 def logo():
@@ -46,7 +35,7 @@ def logo():
 
 
 def xrayScan(targeturl,outputfilename="test"):
-    scanCommand="xray.exe webscan --basic-crawler {} --html-output {}\\{}.html".format(targeturl,saveTempDir,outputfilename)
+    scanCommand="xray.exe webscan --basic-crawler {} --html-output {}\\{}.html".format(targeturl,saveDir,outputfilename)
     print(scanCommand)
     os.system(scanCommand)
     return
