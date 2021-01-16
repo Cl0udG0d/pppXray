@@ -45,7 +45,7 @@ def pppGet():
     for line in lines:
         try:
             if not pattern.match(line.strip()):
-                targeturl="http://"+line.strip()
+                targeturl="https://"+line.strip()
             else:
                 targeturl=line.strip()
             print(targeturl.strip())
