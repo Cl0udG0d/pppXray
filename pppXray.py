@@ -1,7 +1,23 @@
-import os
 import hashlib
 import re
 import time
+import os
+
+RootPath = os.path.dirname(os.path.abspath(__file__))
+saveDir = "{}\\save".format(RootPath)
+saveTempDir = "{}\\save\\temp".format(RootPath)
+saveXrayReport = '{}\\save\\xrayReport'.format(RootPath)
+
+def init():
+    if not os.path.exists(saveDir):
+        os.makedirs(saveDir)
+        os.makedirs(saveTempDir)
+        os.makedirs(saveXrayReport)
+    if not os.path.exists(saveTempDir):
+        os.makedirs(saveTempDir)
+    if not os.path.exists(saveXrayReport):
+        os.makedirs(saveXrayReport)
+    return
 
 def logo():
     logo='''
@@ -62,6 +78,7 @@ def pppGet():
 
 def main():
     print(logo())
+    init()
     pppGet()
     return
 
