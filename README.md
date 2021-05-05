@@ -47,4 +47,6 @@ Xray批量化自动扫描
 
 但为了方便初学安全的小伙伴更方便使用`xray`，参考之前[花溪九尾](https://github.com/Cl0udG0d/HXnineTails)的经验，在脚本中兼容专业版和社区版，以及添加分类的功能，大伙儿就不用点开每个漏洞报告看了，因为有部分类型的漏洞会被忽略，节省查看报告时间
 
+使用前记得`pip install -r requirements.txt` （没科学上网的自主换源）
+
 ![](https://github.com/Cl0udG0d/pppXray/blob/main/images/screen6.png)
