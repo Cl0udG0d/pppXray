@@ -24,7 +24,7 @@ def logo():
    \/   \/_|  \__,_|\__, |
                      __/ |
                     |___/ 
-                            v1.1
+                            v1.2
                             author:springbird
     '''
     return logo

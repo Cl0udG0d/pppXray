@@ -1,9 +1,6 @@
 import re
 
-def test():
-    pattern = re.compile(r'^http')
-    m = pattern.match('http://www.baidu.com')
-    n = pattern.match('hta')
-    print(m)
-    print(n)
-    return
+pattern2 = re.compile(r'"plugin":"(.*?)"')
+str2='web.com/guestbook.php"},"identifier":"","plugin":"xss",'
+result=pattern2.findall(str2)
+print(result)
